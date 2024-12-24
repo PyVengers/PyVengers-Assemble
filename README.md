@@ -48,8 +48,15 @@ Git is a version control system essential for managing project files. If Git is 
 📥 **[Download Git Here](https://git-scm.com/downloads)**
 
 ---
+### 📂 2. Fork the Repository
 
-### 📂 2. Clone the Repository
+To contribute to this open-source project, first fork the repository to your GitHub account:
+Go to the repository: ``` https://github.com/PyVengers/PyVengers-Assemble ```
+Click the "Fork" button in the top-right corner of the page.
+
+---
+
+### 📂 3. Clone the Repository
 
 Clone the project by running the following command in your terminal:
 
@@ -59,7 +66,7 @@ git clone https://github.com/PyVengers/PyVengers-Assemble.git
 
 ---
 
-### 📁 3. Navigate to the Project Directory
+### 📁 4. Navigate to the Project Directory
 
 Change into the project directory:
 
@@ -69,7 +76,7 @@ cd PyVengers-Assemble
 
 ---
 
-### 🚀 4. Run the Application
+### 🚀 5. Run the Application
 
 To start using the PyVengers application:
 
@@ -82,7 +89,7 @@ To start using the PyVengers application:
 
 ---
 
-### 🌈 5. Contribute to PyVengers
+### 🌈 6. Contribute to PyVengers
 
 We welcome contributions to enhance the PyVengers project! Follow these steps to contribute:
 
