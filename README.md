@@ -15,6 +15,12 @@ Welcome to **PyVengers Assemble**, a Python project that simulates the creation 
 
 ---
 
+### ⭐ Show Your Support
+
+If you find this project helpful or interesting, please consider giving it a ⭐ **star** on GitHub! Your support helps us grow and motivates us to improve. 🌟
+
+---
+
 ## ✨ Features
 
 - **Add New PyVenger Profiles**: Add heroes with attributes such as name, superpower, and mission.
