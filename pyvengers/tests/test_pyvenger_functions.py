@@ -2,9 +2,28 @@ import unittest
 from unittest.mock import patch, mock_open
 import json
 from io import StringIO
-from main import add_pyvenger, list_pyvengers, interactive_menu, DATA_FILE
+from main import search_pyvenger, add_pyvenger, list_pyvengers, interactive_menu, DATA_FILE
 
 class TestPyVengers(unittest.TestCase):
+
+    @patch('builtins.open', new_callable=mock_open, read_data='[{"name": "IronMan", "superpower": "Super Strength", "mission": "Save the world"}, {"name": "SpiderMan", "superpower": "Web-Slinging", "mission": "Protect the neighborhood"}]')
+    @patch('os.path.exists', return_value=True)
+    def test_search_pyvenger_found(self, mock_exists, mock_file):
+    # Test searching for a PyVenger with a partial name match
+        with patch('sys.stdout', new_callable=StringIO) as mock_stdout:
+            search_pyvenger("Man")  # Partial match
+            output = mock_stdout.getvalue()
+            self.assertIn("IronMan", output)
+            self.assertIn("SpiderMan", output)
+
+    @patch('builtins.open', new_callable=mock_open, read_data='[{"name": "IronMan", "superpower": "Super Strength", "mission": "Save the world"}]')
+    @patch('os.path.exists', return_value=True)
+    def test_search_pyvenger_not_found(self, mock_exists, mock_file):
+        # Test searching for a PyVenger with no match
+        with patch('sys.stdout', new_callable=StringIO) as mock_stdout:
+            search_pyvenger("Thor")  # No match
+            output = mock_stdout.getvalue()
+            self.assertIn("No PyVenger found containing the name 'Thor'.", output)
 
     @patch('builtins.open', new_callable=mock_open, read_data='[]')
     @patch('os.path.exists', return_value=True)
@@ -57,7 +76,7 @@ class TestPyVengers(unittest.TestCase):
     @patch('os.path.exists', return_value=True)
     def test_interactive_menu_list_option(self, mock_exists, mock_file):
         # Test the list option in the interactive menu
-        with patch('builtins.input', side_effect=['2', '3']), patch('sys.stdout', new_callable=StringIO) as mock_stdout:
+        with patch('builtins.input', side_effect=['2', '4']), patch('sys.stdout', new_callable=StringIO) as mock_stdout:
             interactive_menu()
             output = mock_stdout.getvalue()
             self.assertIn("PyVengers List:", output)
@@ -67,7 +86,7 @@ class TestPyVengers(unittest.TestCase):
     @patch('os.path.exists', return_value=True)
     def test_interactive_menu_add_option(self, mock_exists, mock_file):
         # Test the add PyVenger option in the interactive menu
-        with patch('builtins.input', side_effect=['1', 'Hulk', 'Strength', 'Smash', '3']):
+        with patch('builtins.input', side_effect=['1', 'Hulk', 'Strength', 'Smash', '4']):
             interactive_menu()
         
         # Check if the file was written with the new PyVenger

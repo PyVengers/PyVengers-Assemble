@@ -37,13 +37,28 @@ def list_pyvengers():
     for member in pyvengers:
         print(f"- {member['name']} ({member['superpower']}): {member['mission']}")
 
+def search_pyvenger(name):
+    with open(DATA_FILE, "r") as file:
+        pyvengers = json.load(file)
+        
+    for member in pyvengers:
+        results = [member for member in pyvengers if name.lower() in member["name"].lower()]
+    
+    if results:
+        print("\n🎯 Found PyVengers:")
+        for member in results:
+            print(f"- {member['name']} ({member['superpower']}): {member['mission']}")
+    else:
+        print(f"No PyVenger found containing the name '{name}'.")
+
 def interactive_menu():
     """Interactive CLI menu."""
     while True:
         print("\nWelcome to PyVengers Assemble!")
         print("1. Add a PyVenger")
         print("2. List all PyVengers")
-        print("3. Exit")
+        print("3. Search PyVengers")
+        print("4. Exit")
 
         choice = input("Enter your choice: ")
 
@@ -55,6 +70,9 @@ def interactive_menu():
         elif choice == "2":
             list_pyvengers()
         elif choice == "3":
+            name = input("Enter text to search: ")
+            search_pyvenger(name)
+        elif choice == "4":
             print("Goodbye!")
             break
         else:

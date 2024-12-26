@@ -1,12 +1,17 @@
 [
-    {
-        "name": "PyVengers Leader Tousif",
-        "superpower": "coding",
-        "mission": "Leading PyVengers to create scalable solutions"
-    },
-    {
-        "name": "Algorithm_X",
-        "superpower": "Can design optimal algorithms in seconds, solving any problem with minimal complexity.",
-        "mission": "Eliminate inefficiency and empower developers with elegant solutions."
-    }
+  {
+    "name": "PyVengers Leader Tousif",
+    "superpower": "coding",
+    "mission": "Leading PyVengers to create scalable solutions"
+  },
+  {
+    "name": "Algorithm_X",
+    "superpower": "Can design optimal algorithms in seconds, solving any problem with minimal complexity.",
+    "mission": "Eliminate inefficiency and empower developers with elegant solutions."
+  },
+  {
+    "name": "cloudman Sangwon",
+    "superpower": "Problem Solver",
+    "mission": "Make code world bright"
+  }
 ]
