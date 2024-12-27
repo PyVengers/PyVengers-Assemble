@@ -134,7 +134,9 @@ We welcome contributions to enhance the PyVengers project! Follow these steps to
 
 ### 🆘 Need Help?
 
-If you encounter any issues or have questions, feel free to open a discussion or raise an issue in the repository. The PyVengers community is here to assist you! 🤝
+If you encounter any issues or have questions, feel free to open a discussion or raise an issue in the repository. The PyVengers community is here to assist you! 🤝  
+
+[![Join our Discord](https://img.shields.io/badge/Join%20Our%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Kuh9xsp7)
 
 ---
 
