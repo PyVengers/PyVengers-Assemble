@@ -1,8 +1,14 @@
+import os
+import sys
 import unittest
 from unittest.mock import patch, mock_open
 import json
 from io import StringIO
-from main import search_pyvenger, add_pyvenger, list_pyvengers, interactive_menu, DATA_FILE
+
+# Add the parent directory to sys.path to make 'pyvengers' module discoverable
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from pyvengers import search_pyvenger, add_pyvenger, list_pyvengers, interactive_menu, DATA_FILE
 
 class TestPyVengers(unittest.TestCase):
 
