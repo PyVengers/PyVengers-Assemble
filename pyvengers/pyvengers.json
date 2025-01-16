@@ -23,5 +23,10 @@
         "name": "SA-1111",
         "superpower": "See through!",
         "mission": "Protect open-source!"
+    },
+    {
+        "name": "Silver",
+        "superpower": "flight",
+        "mission": "mars"
     }
 ]
